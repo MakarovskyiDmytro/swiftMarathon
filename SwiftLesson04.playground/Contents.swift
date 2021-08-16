@@ -16,53 +16,54 @@ print("Constanta5 = \(const5)")
 var sum = 0
 
 if let const1Int = Int(const1)  {
-    sum = sum + const1Int
+    sum += const1Int
 }
 
 if let const2Int = Int(const2) {
-    sum = sum + const2Int
+    sum += const2Int
 }
 
 if let const3Int = Int(const3) {
-        sum = sum + const3Int
-    }
+    sum += const3Int
+}
 
 if Int(const4) != nil {
-    sum = sum + Int(const4)!
+    sum += Int(const4)!
 }
 
 if Int(const5) != nil {
-    sum = sum + Int(const5)!
+    sum += Int(const5)!
 }
 
 print("Summ of all Constantas = \(sum)")
 
 //2nd part
-let serverTuple : (statusCode:Int, message:String?, errorMessage:String?) = (302, "Ok", "ErrorMessage")
+let serverTuple : (statusCode: Int, message: String?, errorMessage: String?) = (302, "Ok", "ErrorMessage")
+
 print("Show message if status code >= 200 and <300. Show ErrorMessage if status code has other value.")
+
 if serverTuple.statusCode >= 200 && serverTuple.statusCode < 300 {
     print(serverTuple.message!)
-    }
- else {
-        print(serverTuple.errorMessage!)
-    }
+} else {
+    print(serverTuple.errorMessage!)
+}
 
-let serverTuple2 : (message:String?, errorMessage:String?) = (nil, "ErrorMessage")
+let serverTuple2 : (message: String?, errorMessage: String?) = (nil, "ErrorMessage")
 print("Show message if message != nil. Show ErrorMessage if ErrorMessage != nil")
 if let message = serverTuple2.message {
-    print(message) }
-else {
+    print(message)
+} else {
     if let errorMessage = serverTuple2.errorMessage {
         print(errorMessage)
     }
 }
 
 //3rd part
-var studOne : (Name:String, CarNumber:Int?, Grade:Int?)
-var studTwo : (Name:String, CarNumber:Int?, Grade:Int?)
-var studThree : (Name:String, CarNumber:Int?, Grade:Int?)
-var studFour : (Name:String, CarNumber:Int?, Grade:Int?)
-var studFive : (Name:String, CarNumber:Int?, Grade:Int?)
+var studOne : (Name: String, CarNumber: Int?, Grade: Int?)
+var studTwo : (Name: String, CarNumber: Int?, Grade: Int?)
+var studThree : (Name: String, CarNumber: Int?, Grade: Int?)
+var studFour : (Name: String, CarNumber: Int?, Grade: Int?)
+var studFive : (Name: String, CarNumber: Int?, Grade: Int?)
 
 studOne.Name = "Ivan"
 studTwo.Name = "Svyatogor"
